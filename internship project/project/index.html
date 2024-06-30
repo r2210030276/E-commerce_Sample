@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - E-Commerce</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* CSS for different section backgrounds */
+        .shop-by-category {
+            background-color: #de9013d1;
+            padding: 20px;
+        }
+
+        .latest-products {
+            background-color: #ee0fb68d;
+            padding: 20px;
+        }
+
+        .features {
+            background-color: #1ad7e154;
+            padding: 20px;
+        }
+
+        /* CSS for glowing effect on images */
+        .category img,
+        .product img,
+        .feature img {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .category img:hover,
+        .product img:hover,
+        .feature img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Additional CSS for product and feature links */
+        .product a,
+        .feature a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .product a:hover,
+        .feature a:hover {
+            text-decoration: underline;
+        }
+
+        /* CSS for search bar */
+        .search-bar {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .search-bar input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .search-bar button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .search-bar button:hover {
+            background-color: #555;
+        }
+    </style>
+    <script>
+        function searchProducts() {
+            const searchInput = document.getElementById('searchInput').value.toLowerCase();
+            const products = {
+                'long dress': 'product1_details.html',
+                'cut top': 'product2_details.html',
+                'jeans dress': 'product3_details.html',
+                'grocery': 'category1_details.html',
+                'fashion': 'category2_details.html',
+                'home and furniture': 'category3_details.html',
+                'television': 'feature1_details.html',
+                'refrigerator': 'feature2_details.html',
+                'washing machine': 'feature3_details.html'
+            };
+
+            if (products[searchInput]) {
+                window.location.href = products[searchInput];
+            } else {
+                alert('Product not found!');
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">E-Commerce</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="cart.html">Cart</a></li>
+        </ul>
+    </nav>
+
+    <!-- Search Bar -->
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search for products...">
+        <button onclick="searchProducts()">Search</button>
+    </div>
+
+    <!-- Shop by Category -->
+    <section class="shop-by-category">
+        <h2>Shop by Category</h2>
+        <div class="categories">
+            <div class="category">
+                <a href="category1_details.html">
+                    <img src="images/category1.jpg" alt="Grocery">
+                    <h3>Grocery</h3>
+                </a>
+            </div>
+            <div class="category">
+                <a href="category2_details.html">
+                    <img src="images/category2.jpg" alt="Fashion">
+                    <h3>Fashion</h3>
+                </a>
+            </div>
+            <div class="category">
+                <a href="category3_details.html">
+                    <img src="images/category3.jpg" alt="Home and Furniture">
+                    <h3>Home & Furniture</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Products -->
+    <section class="latest-products">
+        <h2>Fashion top deals</h2>
+        <div class="products">
+            <div class="product">
+                <a href="product1_details.html">
+                    <img src="images/product1.jpg" alt="long dress">
+                    <h3>long dress</h3>
+                    <p>2000</p>
+                </a>
+            </div>
+            <div class="product">
+                <a href="product2_details.html">
+                    <img src="images/product2.jpg" alt="cut top">
+                    <h3>cut top</h3>
+                    <p>2500</p>
+                </a>
+            </div>
+            <div class="product">
+                <a href="product3_details.html">
+                    <img src="images/product3.jpg" alt="jeans dress">
+                    <h3>jeans dress</h3>
+                    <p>1899</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+        <h2>Top deals on Tvs & Applications</h2>
+        <div class="feature-list">
+            <div class="feature">
+                <a href="feature1_details.html">
+                    <img src="images/feature1.jpg" alt="Feature 1">
+                    <h3>Television</h3>
+
+                </a>
+            </div>
+            <div class="feature">
+                <a href="feature2_details.html">
+                    <img src="images/feature2.jpg" alt="Feature 2">
+                    <h3>Refrigerator</h3>
+
+                </a>
+            </div>
+            <div class="feature">
+                <a href="feature3_details.html">
+                    <img src="images/feature3.jpg" alt="Feature 3">
+                    <h3>Washing Machine</h3>
+
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 E-Commerce. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button onclick="topFunction()" id="scrollToTopBtn" title="Go to top">Top</button>
+</body>
+
+</html>

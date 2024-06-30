@@ -1,0 +1,188 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+}
+
+nav .logo {
+    font-size: 1.5rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Slider */
+.slider {
+    position: relative;
+    max-width: 100%;
+    margin: 1rem auto;
+    overflow: hidden;
+}
+
+.slider .slide {
+    display: none;
+}
+
+.slider .slide img {
+    width: 100%;
+}
+
+.slider .slide.active {
+    display: block;
+}
+
+.slider .prev,
+.slider .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.slider .prev {
+    left: 1rem;
+}
+
+.slider .next {
+    right: 1rem;
+}
+
+/* Shop by Category */
+.shop-by-category {
+    padding: 2rem;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.shop-by-category h2 {
+    margin-bottom: 1rem;
+}
+
+.shop-by-category .categories {
+    display: flex;
+    justify-content: space-around;
+}
+
+.shop-by-category .category {
+    flex: 1;
+    margin: 1rem;
+    text-align: center;
+}
+
+.shop-by-category .category img {
+    width: 100%;
+    max-width: 150px;
+    margin-bottom: 0.5rem;
+}
+
+/* Latest Products */
+.latest-products {
+    padding: 2rem;
+    text-align: center;
+}
+
+.latest-products h2 {
+    margin-bottom: 1rem;
+}
+
+.latest-products .products {
+    display: flex;
+    justify-content: space-around;
+}
+
+.latest-products .product {
+    flex: 1;
+    margin: 1rem;
+    text-align: center;
+}
+
+.latest-products .product img {
+    width: 100%;
+    max-width: 150px;
+    margin-bottom: 0.5rem;
+}
+
+/* Features */
+.features {
+    padding: 2rem;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.features h2 {
+    margin-bottom: 1rem;
+}
+
+.features .feature-list {
+    display: flex;
+    justify-content: space-around;
+}
+
+.features .feature {
+    flex: 1;
+    margin: 1rem;
+    text-align: center;
+}
+
+.features .feature img {
+    width: 100%;
+    max-width: 150px;
+    margin-bottom: 0.5rem;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Scroll to Top Button */
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    display: none;
+}

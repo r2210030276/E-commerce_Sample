@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - E-Commerce</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional CSS styles for products page */
+        .products-page {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #c1ee0f66;
+            padding: 20px;
+        }
+
+        .filters {
+            margin-bottom: 20px;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .product {
+            border: 1px solid #eaf704b2;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .product img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #0e0d0db9;
+            padding: 10px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">E-Commerce</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Products List, Category Filter, Price Range Filter -->
+    <section class="products-page">
+        <h2>Products</h2>
+        <div class="filters">
+            <select id="categoryFilter">
+                <option value="">All Categories</option>
+                <option value="category1">Category 1</option>
+                <option value="category2">Category 2</option>
+                <!-- Add more categories as needed -->
+            </select>
+            <input type="range" min="0" max="3000" value="500" id="priceRange">
+            <label for="priceRange">Price Range: rupees<span id="priceValue">3000</span></label>
+        </div>
+        <div class="products" id="productsList">
+            <!-- Products will be dynamically loaded here -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 E-Commerce. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button onclick="topFunction()" id="scrollToTopBtn" title="Go to top">Top</button>
+
+    <!-- Script for loading products dynamically -->
+    <script src="script.js" defer></script>
+</body>
+
+</html>
